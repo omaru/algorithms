@@ -10,6 +10,6 @@ public class ListOfNumbersByNumber {
     static Boolean sumExist(List<Integer> numbers, Integer toFind){
         Supplier<Set<Integer>> supplier = ()-> numbers.stream().collect(Collectors.toSet());
         Predicate<Integer> numberExist = (n)->supplier.get().contains(toFind -n);
-        return numbers.stream().filter(numberExist).count()>0;
+        return numbers.stream().anyMatch(numberExist);
     }
 }
