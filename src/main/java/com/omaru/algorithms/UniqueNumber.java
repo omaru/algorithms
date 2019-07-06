@@ -7,7 +7,7 @@ public class UniqueNumber{
 	private UniqueNumber(Integer[] numbers){
 		this.numbers = numbers;
 	}
-	
+
 	public static UniqueNumber of(Integer[] numbers){
 	   return new UniqueNumber(numbers);
 	}
@@ -19,11 +19,11 @@ public class UniqueNumber{
 	private Optional<Integer> findUnique(){
 		return asBruteForce();
 	}
-	
+
 	private Optional<Integer> asBruteForce(){
 		for(int i = 0; i < numbers.length;i++){
 			Integer current = numbers[i];
-		        int counter = 0; 
+		        int counter = 0;
 			for(int j = 0; j < numbers.length;j++){
 				if(current == numbers[j]){
 					counter+=1;
@@ -33,6 +33,6 @@ public class UniqueNumber{
 				return Optional.of(current);
 			}
 		}
-		return Optional.ofNullable(null);	
+		return Optional.ofNullable(null);
 	}
 }
