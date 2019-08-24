@@ -3,7 +3,6 @@ import java.util.*;
 public class UniqueNumber{
 	private Integer[] numbers;
 	private Integer unique;
-	private final int windowSize =3;
 	private UniqueNumber(Integer[] numbers){
 		this.numbers = numbers;
 	}
